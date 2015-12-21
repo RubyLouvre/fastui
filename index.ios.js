@@ -5,6 +5,10 @@
 'use strict';
 
 var React = require('react-native');
+
+var Fastui = require("./src/ui"),
+    Spinner = Fastui.spinner
+
 var {
   AppRegistry,
   StyleSheet,
@@ -16,16 +20,10 @@ var fastui = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
+        <Text style={styles.label}>
+          spinner
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <Spinner />
       </View>
     );
   }
@@ -34,19 +32,16 @@ var fastui = React.createClass({
 var styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingLeft: 10,
+    paddingRight: 10,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
+  label: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
 
