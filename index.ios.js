@@ -12,26 +12,25 @@ var {
     ListView,
 } = React;
 
-var Form = require('./src/form')
-var Spinner = require('./src/spinner')
-
 var UIList = {
-    Form: Form,
-    Spinner: Spinner
-}
+    Form: require('./examples/form'),
+    Spinner: require('./examples/spinner')
+},
+theme = require('./styles/theme')
 
 var HomeScene = React.createClass({
     onPress: function(uiName){
         this.props.navigator.push({
-            title: 'Form',
+            title: uiName,
+            test: "my prop",
             component: UIList[uiName]
         });
     },
     getInitialState: function() {
-      var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-      return {
-        dataSource: ds.cloneWithRows(['Form', 'Spinner']),
-      };
+        var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+        return {
+            dataSource: ds.cloneWithRows(['Form', 'Spinner']),
+        };
     },
     render() {
         return (
@@ -39,25 +38,11 @@ var HomeScene = React.createClass({
                 <ListView
                     dataSource={this.state.dataSource}
                     renderRow={(uiItem) =>
-                    <TouchableHighlight onPress={() => this.onPress(uiItem)} style={styles.uiItem}>
-                        <Text>{uiItem}</Text>
+                    <TouchableHighlight onPress={() => this.onPress(uiItem)} style={styles.uiItem} underlayColor='#eee'>
+                        <Text style={styles.uiItemText}>{uiItem}</Text>
                     </TouchableHighlight>}
                   />
             </View>
-        );
-    }
-});
-
-var ForTouchScene = React.createClass({
-    getInitialState: function() {
-      var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-      return {
-        dataSource: ds.cloneWithRows(['Form', 'Spinner']),
-      };
-    },
-    render() {
-        return (
-            <Form />
         );
     }
 });
@@ -67,7 +52,7 @@ var fastui = React.createClass({
         return (
             <NavigatorIOS ref="nav"
                 style={styles.container}
-                barTintColor="#7ecaf6"
+                barTintColor='#2db7f5'
                 titleTextColor="#fff"
                 tintColor="#fff"
                 initialRoute={{
@@ -95,7 +80,6 @@ var styles = StyleSheet.create({
     uiItemText: {
         fontSize: 17,
         color: '#5c6b76',
-        backgroundColor: "#09c",
     }
 });
 

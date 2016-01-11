@@ -1,7 +1,6 @@
 'use strict';
 
 var React = require('react-native');
-var Spinner = require('fastui-spinner');
 
 var {
     View,
@@ -10,7 +9,11 @@ var {
     Text,
     TextInput,
     SwitchIOS,
-    } = React;
+} = React;
+
+// fastui
+var fastui = require('../src/ui.js'),
+    Spinner = fastui.Spinner
 
 var Form = React.createClass({
     getInitialState: function () {
@@ -25,6 +28,7 @@ var Form = React.createClass({
         this.setState({spinnerVal: val})
     },
     render: function () {
+        console.log(this.props);
         return (
             <View style={styles.container}>
                 <Spinner

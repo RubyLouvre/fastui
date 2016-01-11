@@ -1,7 +1,10 @@
 'use strict';
 
 var React = require('react-native');
-var f = require('fastui-form');
+
+// fastui
+var fastui = require('../src/ui.js'),
+    f = fastui.Form
 
 var {
     View,
@@ -46,6 +49,7 @@ var model = {
 
 var xForm = React.createClass({
     render: function() {
+        console.log(this.props);
         return (
             <View style={styles.container}>
                 <Form model={model} ref="form"/>
