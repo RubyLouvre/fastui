@@ -1,21 +1,11 @@
-'use strict'
+'use strict';
 
-var React = require('react-native')
-var {StyleSheet} = React
+var React = require('react-native');
 
-// ui
-var Spinner = require('react-native-spinner')
+var UI = {
+    Form: require('fastui-form'),
+    Spinner: require('fastui-spinner')
+},
+theme = require('../styles/theme')
 
-var Fastui = {
-    spinner: function(){
-        return <Spinner style={styles.commonStyle}/>
-    }
-}
-
-var styles = StyleSheet.create({
-    commonStyle: {
-        backgroundColor: 'fff'
-    },
-})
-
-module.exports = Fastui
+module.exports = UI
