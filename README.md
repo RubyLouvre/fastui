@@ -97,37 +97,37 @@ class CalendarDemo extends Component {
 ![form](https://raw.githubusercontent.com/roscoe054/fastui-form/master/demo.gif)
 ```jsx
 var model = {
-        studentName: {
-            type: f.fieldType.String,
-            label: "学生姓名",
-            value: "Giulio",
-            disabled: true,
-            placeholder: "请填写姓名"
-        },
-        age: {
-            type: f.fieldType.Number,
-            label: "年龄",
-            value: 18,
-            placeholder: "请填写年龄"
-        },
-        password: {
-            type: f.fieldType.Password,
-            label: "密码",
-            value: "",
-            placeholder: "请填写密码"
-        },
-        year: {
-            type: f.fieldType.Spinner,
-            label: "入学年份",
-            value: "2015",
-        },
-        rememberMe: {
-            type: f.fieldType.Boolean,
-            label: "记住我",
-            value: true,
-        }
+    studentName: {
+        type: f.fieldType.String,
+        label: "学生姓名",
+        value: "Giulio",
+        disabled: true,
+        placeholder: "请填写姓名"
     },
-    Form = f.Form
+    age: {
+        type: f.fieldType.Number,
+        label: "年龄",
+        value: 18,
+        placeholder: "请填写年龄"
+    },
+    password: {
+        type: f.fieldType.Password,
+        label: "密码",
+        value: "",
+        placeholder: "请填写密码"
+    },
+    year: {
+        type: f.fieldType.Spinner,
+        label: "入学年份",
+        value: "2015",
+    },
+    rememberMe: {
+        type: f.fieldType.Boolean,
+        label: "记住我",
+        value: true,
+    }
+},
+Form = f.Form
 
 var xform = React.createClass({
     render: function() {
