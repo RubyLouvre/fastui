@@ -1,4 +1,10 @@
 # Fastui
+
+[![react-native][rn-badge]][rn]
+
+[rn-badge]: https://img.shields.io/badge/react--native-v0.16.x-05A5D1.svg
+[rn]: https://facebook.github.io/react-native
+
 Fastui components build with React Native
 
 ## Carousel
