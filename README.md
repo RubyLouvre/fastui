@@ -25,7 +25,7 @@ Fastui components build with React Native
   </View>
 </Carousel>
 ```
-👉 [fastui-carousel full doc]
+👉 [fastui-carousel full doc][fastui-carousel doc]
 [fastui-carousel doc]: https://github.com/roscoe054/fastui-carousel
 
 ## Calendar
@@ -90,7 +90,7 @@ class CalendarDemo extends Component {
     }
 }
 ```
-👉 [fastui-calendar full doc]
+👉 [fastui-calendar full doc][fastui-calendar doc]
 [fastui-calendar doc]: https://github.com/roscoe054/fastui-calendar
 
 ## Form
@@ -148,5 +148,5 @@ var xform = React.createClass({
     },
 });
 ```
-👉 [fastui-form full doc]
+👉 [fastui-form full doc][fastui-form doc]
 [fastui-form doc]: https://github.com/roscoe054/fastui-form
