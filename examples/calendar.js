@@ -66,6 +66,7 @@ class CalendarDemo extends Component {
 
 const styles = StyleSheet.create({
     container: {
+        paddingTop: 64,
         flex: 1,
     }
 })
